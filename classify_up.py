@@ -23,7 +23,6 @@ data = df.drop(['Reason for absence'], axis=1) #separate data from labels
 lbl = np.where(df['Reason for absence'] <= 21, 1, 0) #1: CID; 0: non-CID
 
 data = data.div(data.sum(axis=1), axis=0) #normalizate data to build the classifier
-data.to_csv("usr_input.csv") #Save processed data to a new dataset
 
 dataNoLabels = np.asmatrix(data) #data: dataframe to nArray
 
